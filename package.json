@@ -11,16 +11,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/georgejacobt/FriendFinder.git"
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "author": "George J",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/georgejacobt/FriendFinder/issues"
-  },
-  "homepage": "https://github.com/georgejacobt/FriendFinder#readme"
-}
+  "license": "ISC"
+
+  }
