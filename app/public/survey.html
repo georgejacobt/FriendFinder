@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Compiled and minified CSS -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+     
+
+     <script src="https://code.jquery.com/jquery.js"></script>
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="row ">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="name" class="materialize-textarea"></textarea>
+                      <label for="name">Name</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                            <textarea id="linkInfo" class="materialize-textarea"></textarea>
+                            <label for="linkInfo">Link</label>
+                          </div>
+
+
+                  </div>
+
+                  
+                
+                </form>
+                <div class="input-field col s12" >
+                        <select id="question1">
+                                <option value="" disabled selected class="default">Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #1</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question2">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #2</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question3">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #3</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question4">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #4</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question5">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #5</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question6">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #6</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question7">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #7</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question8">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #8</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question9">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disgree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #9</label>
+                </div>
+
+                <div class="input-field col s12" >
+                        <select id="question10">
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">1 (Strongly Disgree)</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <label>Question #10</label>
+                </div>
+
+                <button class="btn waves-effect waves-light submit" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                </button>
+              </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+     $(document).ready(function(){
+    $('select').formSelect();
+  });
+
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+
+     
+
+ // Here we grab the form elements
+       var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#linkInfo").val().trim(),
+        scores: [$("#question1").val().trim(),
+                 $("#question2").val().trim(),
+                 $("#question3").val().trim(),
+                 $("#question4").val().trim(),
+                 $("#question5").val().trim(),
+                 $("#question6").val().trim(),
+                 $("#question7").val().trim(),
+                 $("#question8").val().trim(),
+                 $("#question9").val().trim(),
+                 $("#question10").val().trim()]
+        
+      };
+
+      console.log(newFriend);
+
+      // This line is the magic. It"s very similar to the standard ajax function we used.
+      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+      // depending on if a tables is available or not.
+      $.post("/api/friends", newFriend,
+        function(data) {
+
+          
+        //   if (data) {
+        //     alert("Your values have been saved");
+        //   }
+
+    
+          // Clear the form when submitting
+          $("#name").val("");
+          $("#linkInfo").val("");
+
+
+     
+
+         
+
+      
+
+           
+
+        });
+    });
+// $('select').material_select();
+</script>
