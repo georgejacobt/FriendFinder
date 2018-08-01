@@ -39,7 +39,74 @@ module.exports = function(app) {
     // req.body is available since we're using the body-parser middleware
    
       freiendsData.push(req.body);
-      res.json(freiendsData);
+
+      var currentItemIndex = freiendsData.length-1;
+
+      var totDiff = 100 ;
+      var loopSum;
+      var friendsIndex ;
+      var closeMatch;
+
+ 
+
+
+      for (var j = 0 ; j < freiendsData.length ; j++){
+        console.log(loopSum);
+        
+            if (loopSum < totDiff){
+            totDiff = loopSum;
+            friendsIndex = j-1;
+            
+        
+        }
+        
+        loopSum = 0;
+
+        for (var i =0; i < freiendsData[currentItemIndex].scores.length ; i++ ){
+
+             loopSum = loopSum +    Math.abs((parseInt(freiendsData[j].scores[i]) - parseInt(freiendsData[currentItemIndex].scores[i])));
+            
+
+            // if (loopSum < totDiff){
+
+            //     totDiff = loopSum;
+            //     friendsIndex = j;
+
+            // }
+
+
+
+            
+        
+
+        
+         
+      }
+
+      }
+
+      console.log('current tot diff: '+ totDiff);
+
+      console.log('Close match: '+freiendsData[friendsIndex].name);
+
+      closeMatch =  [freiendsData[friendsIndex].name,freiendsData[friendsIndex].photo]
+
+
+
+
+      
+
+      
+
+   
+
+      
+
+      
+      res.json(closeMatch);
+
+      // console.log(freiendsData);
+     
     
  
   });

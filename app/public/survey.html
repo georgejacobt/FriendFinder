@@ -8,6 +8,7 @@
      <!-- Compiled and minified CSS -->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+     
 
      
 
@@ -157,9 +158,16 @@
                         <label>Question #10</label>
                 </div>
 
-                <button class="btn waves-effect waves-light submit" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light submit modal-trigger" type="submit" name="action" href="#modal1">Submit
                         <i class="material-icons right">send</i>
                 </button>
+                <div id="modal1" class="modal">
+                        <div class="modal-content">
+                          <h4>Your closest match</h4>
+                          <p id="nameMatch">A bunch of text</p>
+                          <p id="photolink">A bunch of text</p>
+                        </div>
+                </div>
               </div>
     </div>
 </body>
@@ -169,6 +177,7 @@
 
      $(document).ready(function(){
     $('select').formSelect();
+    $('.modal').modal();
   });
 
     // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
@@ -179,7 +188,6 @@
     $(".submit").on("click", function(event) {
       event.preventDefault();
 
-     
 
  // Here we grab the form elements
        var newFriend = {
@@ -193,10 +201,13 @@
                  $("#question6").val().trim(),
                  $("#question7").val().trim(),
                  $("#question8").val().trim(),
-                 $("#question9").val().trim(),
-                 $("#question10").val().trim()]
+                $("#question9").val().trim(),
+                 $("#question10").val().trim()],
+        closeMatch: "ok"
         
       };
+
+   
 
       console.log(newFriend);
 
@@ -207,15 +218,21 @@
       $.post("/api/friends", newFriend,
         function(data) {
 
-          
-        //   if (data) {
-        //     alert("Your values have been saved");
-        //   }
+
+    
 
     
           // Clear the form when submitting
           $("#name").val("");
           $("#linkInfo").val("");
+
+          console.log(data);
+
+          $("#nameMatch").text('Name Match: '+data[0]);
+          $("#photolink").text('Image Link: '+data[1]);
+
+
+        //   alert('Closest Match'+data);
 
 
      
@@ -227,6 +244,46 @@
            
 
         });
+
+        // console.log('friend match data'+friendmatchdata);
+        // runFriendsQuery();
     });
+
+
+
+// function runFriendsQuery() {
+
+// // Here we get the location of the root page.
+// // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+// var currentURL = window.location.origin;
+
+// // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+// $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+//   .then(function(freindsData) {
+
+//   // Here we are logging the URL so we have access to it for troubleshooting
+//     console.log("------------------------------------");
+//     console.log("URL: " + currentURL + "/api/friends");
+//     console.log("------------------------------------");
+
+//     // Here we then log the NYTData to console, where it will show up as an object.
+//     console.log(freindsData);
+//     console.log("------------------------------------");
+
+//    for ( var i =0 ; i < freindsData.length ; i++){
+
+//            if (freindsData[i].closeMatch === true){
+//                    console.log('match:'+ freindsData[i].name)
+//                    alert ('your match is: '+freindsData[i].name);
+//                    break;
+//            }
+
+//     }
+
+   
+//   });
+
+
+// }
 // $('select').material_select();
 </script>
